@@ -440,6 +440,10 @@ class IntegerStatistics(list):
 
 class PlayerRandom(Player):
     def __init__(self, table):
+        super().__init__(table)
+        self.table = table
+        PlayerRandom.__init__(self, table)
+        PlayerRandom.placeBets(self)
 
 
 
